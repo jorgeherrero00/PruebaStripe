@@ -77,3 +77,6 @@ Route::get('/invoice/{invoiceId}', function (Request $request, $invoiceId) {
         'product' => 'Suscripción Premium'
     ]);
 })->middleware('auth');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
